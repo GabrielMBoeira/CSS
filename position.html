@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static{
+            top: 100px; /*posição static faz com que top e left não sejam consideradas SE COMPORTA EM RELAÇÃO AOS OUTROS COMPONENTES - OBS STATIC É O PADRÃO*/
+            left: 100px; /*posição static faz com que top e left não sejam consideradas*/
+            background-color: steelblue;
+        }
+
+        .fixed{
+            position: fixed; /*Elemento fica fixo na tela independente da rolagem*/
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+            box-shadow: 5px 5px 1px 1px #000;
+        }
+
+        .relative1{ /*também leva em consideração o elemento anterior na pagina*/
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1{
+            position: absolute; /*se posiciona em relação ao viewport - QUANDO ESTÁ DIRETO NO BODY (se tiver dentro de alguma tag alinha com a tag se tag for relavite , caso contrário padrão é static e absolut considera o viewport*/ 
+            top: 120px;
+            left: 350px;
+            background-color: violet;
+
+        }
+
+        .sticky{
+            position: -webkit-sticky; /*safari*/
+            position: sticky; /* não deixa o elemento sair da pagina.. vai rodando junto até o limite da pag. e não sai*/
+            background-color: #777;
+            top: 0px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

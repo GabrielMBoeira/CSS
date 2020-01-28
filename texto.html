@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        
+        div{
+            font-size: 50px;
+            
+        }
+
+        p{
+            font-size: 2em; /*UNIDADE "em" vai pegar em relação a fonte mais próximo neste caso ele ta dentro da div  (por padrão é html)*/
+        } /*em pega referencia do pai - rem pega referencia da base do HTML*/
+
+        /*
+        font-family: verdana, sans-serif (fonte + sem serifa)
+        font-size: 50vh => altura do viewport em percentual
+        font-size: 10vw => largura do viewport em percentual
+        text-transform: uppercase (todas as letras maiusculas)
+        text-decoration: overline, underline, line-through
+        font-weight: peso da fonte (negrito)
+        word-spacing: 10px (espaço entre as palavras)
+        word-spacing: 20px (espaço entre as letras)
+        line-height: 2.5em (altura da linha)
+        text-align: center (alinhamento do texto)
+        */
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .botao{
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px; /*borda arredondada de raio*/
+        }
+
+        .destaque{
+            color: #fff;
+            background-color: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:active{
+            box-shadow: none; /* active é para quando o click for efetuado.. neste caso irá tirar o box-shadow*/
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>
